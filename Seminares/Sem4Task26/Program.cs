@@ -38,7 +38,7 @@ int DigitCount(int num)
     int sum = 0;
     while (num > 0)
     {
-        sum += 1;
+        sum++;
         num = num / 10;
     }
     return sum;
