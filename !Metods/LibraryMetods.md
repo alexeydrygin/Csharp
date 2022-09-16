@@ -3,12 +3,12 @@
 // Чтение данных из консоли
 int ReadData(string line)
 {
-    //Выводим сообщение
-    Console.WriteLine(line);
-    //Считываем число
-    int number = int.Parse(Console.ReadLine() ?? "0");
-    //Возвращаем значение
-    return number;
+//Выводим сообщение
+Console.WriteLine(line);
+//Считываем число
+int number = int.Parse(Console.ReadLine() ?? "0");
+//Возвращаем значение
+return number;
 }
 
 //-----------Метод вывода данных----------------
@@ -16,7 +16,7 @@ int ReadData(string line)
 //Метод вывода данных
 void PrintResult(string line)
 {
-    Console.WriteLine(line);
+Console.WriteLine(line);
 }
 
 //-----------Метод суммирования, возвращает сумму из цикла----------------
@@ -24,12 +24,12 @@ void PrintResult(string line)
 //Метод суммирования, возвращает сумму из цикла
 int VariantSumSimple(int numA)
 {
-    int sumOfNumbers = 0;
-    for (int i = 1; i <= numA; i++) //for от нуля до того пока не достигнем числа А прибавляем по единице
-    {
-        sumOfNumbers += i;//накапливаем i
-    }
-    return sumOfNumbers;
+int sumOfNumbers = 0;
+for (int i = 1; i <= numA; i++) //for от нуля до того пока не достигнем числа А прибавляем по единице
+{
+sumOfNumbers += i;//накапливаем i
+}
+return sumOfNumbers;
 }
 
 //-----------Метод суммирования по Гауссу S=((A1+An)\*N)/2----------------
@@ -37,8 +37,8 @@ int VariantSumSimple(int numA)
 //Метод суммирования по Гауссу
 int VariantSumGause(int numA)
 {
-    int sumOfNumbers = 0;
-    sumOfNumbers = ((1 + numA) \*numA) / 2;
+int sumOfNumbers = 0;
+sumOfNumbers = ((1 + numA) \*numA) / 2;
 return sumOfNumbers;
 }
 
@@ -58,11 +58,11 @@ Console.WriteLine(DateTime.Now - d2);
 //Метод вычисления суммы цифр в числе
 int SumDigit(int num)
 {
-    int sum = 0;
-    while (num > 0)
-        sum += num % 10;
-    num = num / 10;
-    return sum;
+int sum = 0;
+while (num > 0)
+sum += num % 10;
+num = num / 10;
+return sum;
 }
 
 //-----------Метод вычисления количества цифр в числе----------------
@@ -70,13 +70,13 @@ int SumDigit(int num)
 //Метод вычисления количества цифр в числе
 int DigitCount(int num)
 {
-    int sum = 0;
-    while (num > 0)
-    {
-        sum += 1;
-        num = num / 10;
-    }
-    return sum;
+int sum = 0;
+while (num > 0)
+{
+sum += 1;
+num = num / 10;
+}
+return sum;
 }
 
 //-----------Метод вычисления произведения цифр в числе----------------
@@ -84,14 +84,59 @@ int DigitCount(int num)
 //Метод вычисления произведения цифр в числе
 long MuttA(int number)
 {
-    int i = 1;
-    long sum = 1;
-    while (i <= number)
-    {
-        sum = sum * i;
-        i++;
-    }
-    return sum;
+int i = 1;
+long sum = 1;
+while (i <= number)
+{
+sum = sum \* i;
+i++;
+}
+return sum;
 }
 
 //---------------------------
+//Универсальный метод генерации и заполнения массива
+int[] FillArray(int num, int downDorder, int topBorder)
+{
+//Генератор случайных чисел
+Random numSintezator = new Random();
+//Создаем массив
+int[] arr = new int[num];
+//Тест границ массива
+if (downDorder < topBorder)
+//Заполняем массив
+for (int i = 0; i < arr.Length; i++)
+{
+arr[i] = numSintezator.Next(downDorder, topBorder);
+}
+//Возвращаем результат
+return arr;
+}
+
+//Печатаем одномерный массив
+void Print1DArr(int[] arr)
+{
+for (int i = 0; i < arrLength - 1; i++)
+{
+Console.Write(arr[i] + ", ");
+}
+Console.WriteLine(arr[arr.Length - 1]);
+}
+
+//Метод вычисления положительных и отрицательных чисел в массиве
+int[] NegativPositivSums(int[] arr)
+{
+int[] sums = new int[2];
+for (int i = 0; i < arr.Length; i++)
+{
+if (arr[i] > 0)
+{
+sums[0] += arr[i];
+}
+else
+{
+sums[1] += arr[i];
+}
+}
+return sums;
+}

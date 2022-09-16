@@ -31,11 +31,11 @@
 // }
 
 
-int n = 8;
-int[] array = new int[n];
-Random rand = new Random();
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = rand.Next(0, 2);
-}
-Console.WriteLine(string.Join(", ", array));
+// int n = 8;
+// int[] array = new int[n];
+// Random rand = new Random();
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = rand.Next(0, 2);
+// }
+// Console.WriteLine(string.Join(", ", array));
