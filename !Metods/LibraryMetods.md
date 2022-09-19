@@ -116,7 +116,7 @@ return arr;
 //Печатаем одномерный массив
 void Print1DArr(int[] arr)
 {
-for (int i = 0; i < arrLength - 1; i++)
+for (int i = 0; i < arr.Length - 1; i++)
 {
 Console.Write(arr[i] + ", ");
 }
@@ -139,4 +139,18 @@ sums[1] += arr[i];
 }
 }
 return sums;
+}
+
+//Метод определения четных чисел в массиве
+int EventCont(int[] arr)
+{
+int quantity = 0;
+for (int i = 0; i < arr.Length; i++)
+{
+if (arr[i] % 2 == 1)
+{
+quantity++;
+}
+}
+return quantity;
 }

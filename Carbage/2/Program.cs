@@ -5,8 +5,3 @@
 // Console.Write($"{Environment.NewLine}Press any key to exit...");
 // Console.ReadKey(true);
 
-String math = (100 * 5 - 2);
-
-Console.WriteLine(math);
-
-Console.ReadLine(); // For Pause
