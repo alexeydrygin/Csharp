@@ -16,11 +16,11 @@ int ReadData(string line)
     return number;
 }
 
-//Печать результата
-void PrintData(string prefix, string data) //разбили на две части вывод в консоль
-{
-    Console.WriteLine(prefix + data);
-}
+// //Печать результата
+// void PrintData(string prefix, string data) //разбили на две части вывод в консоль
+// {
+//     Console.WriteLine(prefix + data);
+// }
 
 //Универсальный метод генерации и заполнения 2D массива
 int[,] Fill2DArray(int countRow, int countColumn, int downBorder, int topBorder)
