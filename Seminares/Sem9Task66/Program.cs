@@ -28,7 +28,7 @@ void SumFromMtoN(int m1, int n1, int sum)
 {
     if (m1 > n1)
     {
-        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}");
+        Console.WriteLine($"Сумма натуральных элементов \n в промежутке от M до N: {sum}");
         return;
     }
     sum = sum + (m1++);
